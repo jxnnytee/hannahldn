@@ -88,7 +88,7 @@ function Booking() {
             <Image  w={10} h={10} src={'../images/aro.webp'} />
             </Center>
             </Box>
-                <Box bgColor={'white'} w={'100%'} border={'brown solid 4px'} p={2}>
+                <Box bgColor={'white'} w={'100%'} border={'brown solid 4px'} p={0}>
                    
                 <DatePicker
                   selected={selectedDate}
