@@ -20,7 +20,7 @@ function Booking() {
     emailjs.sendForm('service_yy54r7e', 'template_x1cfatu', e.target, '32JodH7Khscah0NUv')
       .then((result: any) => {
           console.log(result.text);
-          navigate('/'); // Navigate to /success after successful form submission
+          navigate('/success'); // Navigate to /success after successful form submission
       }, (error: any) => {
           console.log(error.text);
       });
