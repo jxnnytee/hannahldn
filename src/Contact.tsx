@@ -58,7 +58,7 @@ function Contact() {
                 bgColor={"transparent"}
                 p={5}
                 fontWeight={'light'}
-                textShadow={'0px 0px 20px white'}
+                textShadow={'0px 0px 10px white'}
                 h={"100%"}
               >
                 <Text pb={1}>NAME</Text>
@@ -71,7 +71,7 @@ function Contact() {
                 <Text pb={1} pt={5}>MESSAGE</Text>
                 <Textarea name="message" borderRadius={0}></Textarea>
                 
-                <Button type="submit" value={'send'} color={'blackAlpha.800'} mt={5} size={'lg'} w={'100%'} bgColor={'whitesmoke'}>
+                <Button type="submit" value={'send'} color={'whitesmoke'} mt={5} size={'lg'} w={'100%'} bgColor={'brown'}>
                     SEND
                 </Button>
                 

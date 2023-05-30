@@ -53,6 +53,7 @@ function Booking() {
             >
               BOOKING
             </Text>
+            <Text pt={2} fontWeight={'light'} color={'whitesmoke'}>Secure your spot by booking.</Text>
             <form ref={form} onSubmit={sendEmail}>
             <Box p={4}>
               <Box
@@ -83,9 +84,12 @@ function Booking() {
                 <Box color={'black'} p={2} borderRadius={5} w={'100%'}>
                 <Text pb={1} mb={2} mt={2} fontSize={'md'} color={'white'} fontWeight={'bold'}>Tap to pick a date & time below:</Text>
                 <Box mb={5}>
+                    <Center>
             <Image  w={10} h={10} src={'../images/aro.webp'} />
+            </Center>
             </Box>
-                <Box bgColor={'white'} borderRadius={20} p={2}>
+                <Box bgColor={'white'} w={'100%'} border={'brown solid 4px'} p={2}>
+                   
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date: any) => setSelectedDate(date)}
@@ -95,12 +99,16 @@ function Booking() {
                   dateFormat="dd/MM/yyyy HH:mm"
                   placeholderText="Select a date and time"
                 />
+               
                 </Box>
                 <input type="hidden" name="datetime" value={selectedDate || ""} />
                 </Box>
-                <Button type="submit" value={'send'} color={'blackAlpha.800'} mt={5} size={'lg'} w={'100%'} bgColor={'whitesmoke'}>
+                <Button type="submit" value={'send'} color={'whitesmoke'} mt={5} size={'lg'} w={'100%'} bgColor={'brown'}>
                     BOOK
                 </Button>
+                
+
+                
                 
                 <Box mt={20} w={'100%'} alignItems={'center'}>
                 <Center>
