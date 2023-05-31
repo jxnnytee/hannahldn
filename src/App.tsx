@@ -22,8 +22,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/success" element={<Success />} />
         <Route path="/thankyou" element={<Thankyou />} />
+        
       </Routes>
       <Carousel />
+      
       
       <Footer />
     </Router>

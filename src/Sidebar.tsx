@@ -101,10 +101,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 24 }}
-      
+      pos={'fixed'}
       w={'100%'}
       alignItems="center"
-      bgColor="black"
+      className='card2'
       
       justifyContent="flex-start"
       {...rest}>
@@ -120,11 +120,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         color={'white'}
         aria-label="open menu"
         icon={<RiMenu2Line />}
-      />
-     
-  
- 
-     
+      />   
     </Flex>
   );
 };

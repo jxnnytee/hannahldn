@@ -5,24 +5,30 @@ import { useNavigate } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
-
-
+import { useEffect } from "react";
 
 function Booking() {
   const [selectedDate, setSelectedDate] = useState(null);
-  const navigate = useNavigate()
-  const form = useRef(null); 
+  const navigate = useNavigate();
+  const form = useRef(null);
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
     e.target.datetime.value = selectedDate;
-  
+
     emailjs.sendForm('service_yy54r7e', 'template_x1cfatu', e.target, '32JodH7Khscah0NUv')
       .then((result: any) => {
-          console.log(result.text);
-          navigate('/success'); // Navigate to /success after successful form submission
-      }, (error: any) => {
-          console.log(error.text);
+        console.log(result.text);
+        navigate('/success'); // Navigate to /success after successful form submission
+        window.scrollTo(0, 0); // Scroll to the top after navigation
+      })
+      .catch((error: any) => {
+        console.log(error.text);
       });
   };
 
@@ -32,7 +38,8 @@ function Booking() {
         <Center>
           <Box
             w={"100%"}
-            minH={{ base: "50vh", md: "100vh" }}
+            minH={{ base: "100vh", md: "100vh" }}
+            
             bgImage={"../images/ma2.jpg"}
             bgRepeat={"none"}
             bgPos={"center"}
@@ -43,7 +50,7 @@ function Booking() {
             <Box px={{ base: 0, md: 500}}>
             <Text
               fontFamily={"Poppins"}
-              pt={70}
+              pt={10}
               color={"whitesmoke"}
               
               fontSize={"4xl"}

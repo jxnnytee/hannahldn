@@ -1,5 +1,5 @@
 import { Box, Button, Center, Input, Text, Image, Textarea } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,10 @@ function Contact() {
   const navigate = useNavigate()
   const form = useRef(null); 
   
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -15,7 +19,8 @@ function Contact() {
     emailjs.sendForm('service_yy54r7e', 'template_7kj3oc9', e.target, '32JodH7Khscah0NUv')
       .then((result: any) => {
           console.log(result.text);
-          navigate('/thankyou'); // Navigate to /success after successful form submission
+          navigate('/thankyou'); 
+          window.scrollTo(0, 0); // Navigate to /success after successful form submission
       }, (error: any) => {
           console.log(error.text);
       });
@@ -27,7 +32,7 @@ function Contact() {
         <Center>
           <Box
             w={"100%"}
-            minH={{ base: "50vh", md: "100vh" }}
+            minH={{ base: "100vh", md: "100vh" }}
             bgImage={"../images/ma2.jpg"}
             bgRepeat={"none"}
             bgPos={"center"}

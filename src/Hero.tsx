@@ -15,9 +15,9 @@ function Hero() {
   
     bgRepeat={'none'} bgPos={'center'}
     bgSize={'cover'}
-     minH={{ base:'50vh', md: '100vh'}} fontSize={'lg'}   fontFamily={'Poppins'} bgColor={'black'} w={'100%'}>
+     minH={{ base:'100vh', md: '100vh'}} fontSize={'lg'}   fontFamily={'Poppins'} bgColor={'black'} w={'100%'}>
             <Box>
-        <Box p={5} pt={200}>
+        <Box p={5}>
         <Heading  fontSize={{ base:'4xl', md: '7xl', lg: '8xl'}} 
          color={'whitesmoke'}
         textShadow={'0px 0px 20px white'}

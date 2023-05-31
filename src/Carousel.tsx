@@ -40,7 +40,7 @@ export default function Carousel() {
     <Box
       position={'relative'}
       bgColor={'black'}
-      mt={200}
+      mb={20}
       p={{base: 0, md: 0 }}
       
       overflow={'hidden'}>
