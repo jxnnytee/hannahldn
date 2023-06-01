@@ -33,7 +33,7 @@ function Contact() {
           <Box
             w={"100%"}
             minH={{ base: "100vh", md: "100vh" }}
-            bgImage={"../images/ma2.jpg"}
+           
             bgRepeat={"none"}
             bgPos={"center"}
             bgSize={"cover"}
@@ -75,10 +75,18 @@ function Contact() {
                 <Input name="email" borderRadius={0} type="text" placeholder={"Email"} />
                 <Text pb={1} pt={5}>MESSAGE</Text>
                 <Textarea name="message" borderRadius={0}></Textarea>
-                
-                <Button type="submit" value={'send'} color={'whitesmoke'} mt={5} size={'lg'} w={'100%'} bgColor={'brown'}>
-                    SEND
-                </Button>
+                <Center>
+                <Button mt={10} fontSize={{ base: '2xl', md: '5xl'}} fontWeight={'bold'} 
+      
+      color={'black'}
+      rounded={'12'}
+      value={'send'}
+      type={'submit'}
+      padding={{base: '30px', md: '50px 100px 50px 100px'}}
+      borderRadius={'full'}
+      _hover={{ bg: 'black', color: 'white' }}
+      
+      fontFamily={'Poppins'}>SEND</Button></Center>
                 
                 <Box mt={20} w={'100%'} alignItems={'center'}>
                 <Center>

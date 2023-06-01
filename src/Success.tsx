@@ -7,7 +7,7 @@ function Success() {
     return (
     <Center 
     id="success"
-    bgImg={'../images/ma1.jpg'}
+    bgImg={'../images/mblur.jpg'}
     bgRepeat={'none'} bgPos={'center'}
     bgSize={'cover'}
      minH={{ base:'100vh', md: '100vh'}}
@@ -19,9 +19,9 @@ function Success() {
         <Heading  fontSize={{ base:'4xl', md: '7xl', lg: '8xl'}} 
          color={'whitesmoke'}
          fontFamily={'Poppins'}
-        textShadow={'0px 0px 10px white'}
-        fontWeight={'lighter'} >
-            Booking Received
+        
+        fontWeight={'bold'} >
+        CONFIRMED
         </Heading>
         <Center>
             <Text mt={10} fontSize={'lg'} textShadow={'0px 0px 20px white'} color={'whitesmoke'}>Thank you for your booking. </Text>
@@ -34,14 +34,16 @@ function Success() {
                 
             <Box p={5}>
                 <Link href="/">
-        <Button fontSize={'md'} fontWeight={'semibold'} 
-        bgColor={'whitesmoke'} p={5} 
-        color={'black'}
-        rounded={'12'}
-        mt={20}
-        _hover={{ bg: 'black', color: 'white' }}
-        
-        fontFamily={'Poppins'}>RETURN TO HOMEPAGE</Button>
+                <Button fontSize={{ base: '2xl', md: '5xl'}} fontWeight={'bold'} 
+      
+      color={'black'}
+      rounded={'12'}
+      
+      padding={{base: '30px', md: '50px 100px 50px 100px'}}
+      borderRadius={'full'}
+      _hover={{ bg: 'black', color: 'white' }}
+      
+      fontFamily={'Poppins'}>RETURN TO HOME</Button>
         </Link>
         <Box>
             <Box pt={20}>

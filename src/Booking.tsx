@@ -1,36 +1,31 @@
-import { Box, Button, Center, Input, Text, Image, Textarea } from "@chakra-ui/react";
-import { useState } from "react";
-import DatePicker from "react-datepicker";
-import { useNavigate } from "react-router-dom";
-import "react-datepicker/dist/react-datepicker.css";
-import emailjs from '@emailjs/browser';
-import { useRef } from "react";
+import { Box, Center, Text, Button } from "@chakra-ui/react";
 import { useEffect } from "react";
+import 'react-datepicker/dist/react-datepicker.css';
+
+
+
+
+
+
 
 function Booking() {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const navigate = useNavigate();
-  const form = useRef(null);
+  
+ 
+
+
+  const openBookingPopup = () => {
+    window.open("https://hannahlondonbeauty.dayschedule.com/", "_blank");
+  };
+
+// ...
+
 
   useEffect(() => {
-    // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
   }, []);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    e.target.datetime.value = selectedDate;
+  
 
-    emailjs.sendForm('service_yy54r7e', 'template_x1cfatu', e.target, '32JodH7Khscah0NUv')
-      .then((result: any) => {
-        console.log(result.text);
-        navigate('/success'); // Navigate to /success after successful form submission
-        window.scrollTo(0, 0); // Scroll to the top after navigation
-      })
-      .catch((error: any) => {
-        console.log(error.text);
-      });
-  };
 
   return (
     <>
@@ -39,97 +34,38 @@ function Booking() {
           <Box
             w={"100%"}
             minH={{ base: "100vh", md: "100vh" }}
-            
-            bgImage={"../images/ma2.jpg"}
             bgRepeat={"none"}
             bgPos={"center"}
             bgSize={"cover"}
-            
-           
           >
             <Box px={{ base: 0, md: 500}}>
             <Text
               fontFamily={"Poppins"}
               pt={10}
               color={"whitesmoke"}
-              
               fontSize={"4xl"}
               fontWeight={"light"}
-             
               textShadow={'0px 0px 20px white'}
             >
               BOOKING
             </Text>
-            <Text pt={2} fontWeight={'light'} color={'whitesmoke'}>Secure your spot by booking.</Text>
-            <form ref={form} onSubmit={sendEmail}>
-            <Box p={4}>
-              <Box
-                w={"100%"}
-                
-                
-                borderRadius={20}
-                textAlign={"start"}
-                color={"whitesmoke"}
-                bgColor={"transparent"}
-                p={5}
-                fontWeight={'light'}
-                textShadow={'0px 0px 20px white'}
-                h={"100%"}
-              >
-                <Text pb={1}>FIRST NAME</Text>
-                <Input name="firstname" type="text" borderRadius={0} placeholder={"First Name"} />
-                <Text pb={1} pt={5}>LAST NAME</Text>
-                <Input name="lastname" type="text" borderRadius={0} placeholder={"Last Name"} />
-                <Text pb={1} pt={5}>PHONE NUMBER</Text>
-                <Input name="phonenumber" type="number" maxLength={11} borderRadius={0} placeholder={"Phone Number"} />
-                <Text pb={1} pt={5}>EMAIL</Text>
-                <Input name="email" borderRadius={0} type="text" placeholder={"Email"} />
+            <Text p={8} fontWeight={'light'} fontSize={'sm'} color={'whitesmoke'}>Secure your spot by booking today. You will be redirected to the booking page</Text>
+           <Box p={5}>
+           <Button onClick={openBookingPopup} fontSize={{ base: '2xl', md: '5xl'}} fontWeight={'bold'} 
+      
+      color={'black'}
+      rounded={'12'}
+      
+      padding={{base: '30px', md: '50px 100px 50px 100px'}}
+      borderRadius={'full'}
+      _hover={{ bg: 'black', color: 'white' }}
+      
+      fontFamily={'Poppins'}>BOOK NOW</Button>
 
-                <Text pb={1} pt={5}>DETAILS</Text>
-                <Textarea name="message" mt={1}></Textarea>
-                <Text pb={1} fontWeight={'medium'} pt={5}>DATE & TIME</Text>
-                <Box color={'black'} p={2} borderRadius={5} w={'100%'}>
-                <Text pb={1} mb={2} mt={2} fontSize={'md'} color={'white'} fontWeight={'bold'}>Tap to pick a date & time below:</Text>
-                <Box mb={5}>
-                    <Center>
-            <Image  w={10} h={10} src={'../images/aro.webp'} />
-            </Center>
-            </Box>
-                <Box bgColor={'white'} w={'100%'} border={'brown solid 4px'} p={0}>
-                   
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date: any) => setSelectedDate(date)}
-                  showTimeSelect
-                  timeFormat="HH:mm"
-                  timeIntervals={15}
-                  dateFormat="dd/MM/yyyy HH:mm"
-                  placeholderText="Select a date and time"
-                />
-               
                 </Box>
-                <input type="hidden" name="datetime" value={selectedDate || ""} />
-                </Box>
-                <Button type="submit" value={'send'} color={'whitesmoke'} mt={5} size={'lg'} w={'100%'} bgColor={'brown'}>
-                    BOOK
-                </Button>
                 
-
-                
-                
-                <Box mt={20} w={'100%'} alignItems={'center'}>
-                <Center>
-            <Image w={10} mt={20} h={20} transform='rotate(180deg)' src={'../images/downer.gif'} />
-            </Center>
-            </Box>
-            
-           
-              </Box>
-              
-              </Box>
-              </form>
-            </Box>
           </Box>
+        </Box>
         </Center>
       </Box>
     </>
@@ -137,3 +73,4 @@ function Booking() {
 }
 
 export default Booking;
+

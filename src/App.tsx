@@ -10,6 +10,8 @@ import Footer from './Footer';
 import './App.css';
 import Success from './Success';
 import Thankyou from './Thankyou';
+import About from './About';
+import Pricing from './Pricing';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/thankyou" element={<Thankyou />} />
         
       </Routes>
+      <About />
+     
       <Carousel />
       
       

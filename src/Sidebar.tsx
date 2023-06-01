@@ -54,7 +54,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      bgImage={'../images/ma2.jpg'}
+      bg={'black'}
       
       w={{ base: 'full', md: 60 }}
       pos="fixed"
@@ -62,20 +62,21 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       fontFamily={'Poppins'}
       
       {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-      <Text textShadow={'0px 0px 10px white'} color={'whitesmoke'} fontSize="lg" ml="8" fontFamily="Poppins" fontWeight="light">
+      <Flex  h="20" alignItems="center" mx="8" justifyContent="space-between">
+      <CloseButton ml={0} color={'white'} display={{ base: 'flex', md: 'none' }}  onClick={onClose} />
+      <Text  textShadow={'0px 0px 0px white'} color={'whitesmoke'} fontSize="lg" mr={10} fontFamily="Poppins" fontWeight="light">
         HANNAH LONDON BEAUTY
       </Text>
       
-        <CloseButton ml={-20} color={'white'} display={{ base: 'flex', md: 'none' }}  onClick={onClose} />
+       
       </Flex>
-      <VStack p={50} borderTop={'0.5px white solid'} fontSize={'2xl'} textShadow={'0px 0px 10px white'} color={'whitesmoke'}>
-        <Link borderBottom={'0.5px white solid'} pb={5} href="/">
+      <VStack border={'white solid 1px'} p={50}  fontSize={'2xl'} textShadow={'0px 0px 0px white'} color={'whitesmoke'}>
+        <Link  pb={5} href="/">
           
           HOME
         
         </Link>
-        <Link pt={2} borderBottom={'0.5px white solid'} pb={5} href="/booking">
+        <Link pt={2}  pb={5} href="/booking">
           
           BOOK
         
@@ -103,8 +104,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       px={{ base: 4, md: 24 }}
       pos={'fixed'}
       w={'100%'}
+     
       alignItems="center"
-      className='card2'
+      bg={'transparent'}
       
       justifyContent="flex-start"
       {...rest}>

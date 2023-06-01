@@ -34,6 +34,8 @@ export default function Carousel() {
     './images/hh2.jpg',
     './images/hh3.jpg',
     './images/hh4.jpg',
+    './images/h7.jpg',
+    './images/h9.jpg',
   ];
 
   return (
@@ -54,7 +56,7 @@ export default function Carousel() {
              
               textShadow={'0px 0px 10px white'}
             >
-              OUR WORK
+              MY WORK
             </Text>
       {/* CSS files for react-slick */}
       <link
