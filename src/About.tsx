@@ -1,4 +1,4 @@
-import { Box, HStack, Text, Center, Heading, Divider, Button, Image, Link } from "@chakra-ui/react"
+import { Box, HStack, Text, Center, Image } from "@chakra-ui/react"
 import { keyframes } from "@emotion/react"
 
 const fadeIn = keyframes`

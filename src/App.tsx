@@ -11,7 +11,6 @@ import './App.css';
 import Success from './Success';
 import Thankyou from './Thankyou';
 import About from './About';
-import Pricing from './Pricing';
 
 function App() {
   return (
