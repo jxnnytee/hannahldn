@@ -28,7 +28,7 @@ function About() {
               <HStack p={4} animation={`${fadeIn} 2s`} fontFamily={'Poppins'}  textShadow={'0px 0px 0px white'}>
                 <Text align={'start'} fontSize={{ base: 'lg', md: 'lg', lg: 'lg'}} color={'whitesmoke'}>
                 Hey beautiful! 
-My name is Hannah and I am a makeup artist/content creator who is passionate about all things beauty. <br /> <br /> I have been doing makeup for over 5 years now and I have worked with a variety of different skin tones and skin types. I am also a qualified beauty therapist and I have a diploma in makeup artistry. <br /> <br /> I am based in South East London, Peckham, however I am able to travel if it aligns with my availability. A £20 non refundable deposit is required and the rest will be paid on the day in cash only.
+My name is Hannah and I am a makeup artist/content creator who is passionate about all things beauty. <br /> <br /> I have been doing makeup for over 5 years now and I have worked with a variety of different skin tones and skin types.<br /> <br /> I am based in South East London, Peckham, however I am able to travel if it aligns with my availability. A £20 non refundable deposit is required and the rest will be paid on the day in cash only.
 
 I am based in South East London, Peckham, however I am able to travel if it aligns with my availability. A £20 non refundable deposit is required and the rest will be paid on the day in cash only. <br /><br />
 
