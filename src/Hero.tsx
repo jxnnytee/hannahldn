@@ -33,7 +33,7 @@ function Hero() {
             <Center>
               <HStack borderBottom={'1px solid white'} animation={`${fadeIn} 2s`} fontFamily={'serif'}  textShadow={'0px 0px 30px black'}>
                 <Text fontWeight={'normal'} fontSize={{ base: 'lg', md: '4xl'}} color={'whitesmoke'}>
-                    HANNNAH LONDON BEAUTY
+                    HANNAH LONDON BEAUTY
                 </Text>
                
                

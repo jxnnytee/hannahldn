@@ -34,7 +34,6 @@ export default function Carousel() {
     './images/hh2.jpg',
     './images/hh3.jpg',
     './images/hh4.jpg',
-    './images/h7.jpg',
     './images/h9.jpg',
   ];
 
