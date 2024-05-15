@@ -11,7 +11,7 @@ function Hero() {
 
     return (
     <Center 
-    bgImg={'../images/mm2.jpg'}
+    bgImg={'../images/hlb8.jpeg'}
    
     bgRepeat={'none'} bgPos={'center'}
     bgSize={'cover'}
