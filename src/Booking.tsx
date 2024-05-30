@@ -50,6 +50,7 @@ function Booking() {
               BOOKING
             </Text>
             <Text p={8} fontWeight={'light'} fontSize={'sm'} color={'whitesmoke'}>Secure your spot by booking today. You will be redirected to the booking page</Text>
+              <Center>
            <Box p={5}>
            <Button onClick={openBookingPopup} fontSize={{ base: '2xl', md: '5xl'}} fontWeight={'bold'} 
       
@@ -63,6 +64,7 @@ function Booking() {
       fontFamily={'Poppins'}>BOOK NOW</Button>
 
                 </Box>
+                </Center>
                 
           </Box>
         </Box>
