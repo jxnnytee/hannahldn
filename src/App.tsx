@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SimpleSidebar from './Sidebar';
 import Navbar from './Navbar';
@@ -19,17 +18,20 @@ function App() {
       <SimpleSidebar children={undefined} />
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/booking" element={<Booking />} />
+        <Route 
+          path="/booking" 
+          element={
+            <>
+              <Booking />
+              <About />
+            </>
+          } 
+        />
         <Route path="/contact" element={<Contact />} />
         <Route path="/success" element={<Success />} />
         <Route path="/thankyou" element={<Thankyou />} />
-        
       </Routes>
-      <About />
-     
       <Carousel />
-      
-      
       <Footer />
     </Router>
   );
