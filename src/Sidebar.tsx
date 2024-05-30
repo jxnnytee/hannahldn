@@ -113,7 +113,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       <IconButton
         size="lg"
         fontSize={30}
-        bg={'black'}
+        bg={'transparent'}
         onClick={onOpen}
         _hover={{
           bg: 'transparent',
