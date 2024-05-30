@@ -52,7 +52,7 @@ export default function Carousel() {
       overflow={'hidden'}>
         <Text
               fontFamily={"Poppins"}
-              pb={10}
+              p={10}
               color={"whitesmoke"}
               
               fontSize={"4xl"}
